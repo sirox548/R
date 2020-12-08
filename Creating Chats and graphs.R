@@ -154,6 +154,22 @@ diamonds %>%
   )
 
 
+# BOXPLOT BY GROUP ######################################
+
+diamonds %>%
+  select(color, price) %>%
+  plot()
+
+# Boxplot by group using boxplot()
+diamonds %>%
+  select(color, price) %>%
+  boxplot(
+    price ~ color, # Tilde indicate formula
+    data =  . ,
+    col = "green3"
+  )
+
+
 
 
 # CLEAN UP  #############################################
